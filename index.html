@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MVVM - Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" href="#">MVVM - Demo</a>
+    </nav>
+
+
+    <div class="container main-container col-xs-6 col-xs-offset-3">
+        <form action="" method="POST" role="form" data-bind="submit : addContact">
+            <legend>Address Book</legend>
+
+            <div class="form-group">
+                <label for="">Enter Name</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Name" data-bind="value :name">
+            </div>
+
+            <div class="form-group">
+                <label for="">Enter Number</label>
+                <input type="phone" class="form-control" id="" placeholder="Enter Number" data-bind="value : number">
+            </div>
+            <div class="form-group">
+                <label for="">Enter Sex</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Sex" data-bind="value : sex">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Sex</th>
+
+                </tr>
+            </thead>
+            <tbody data-bind="foreach : contacts">
+                <tr>
+                    <td data-bind="text: name"></td>
+                    <td data-bind="text: number"></td>
+                    <td data-bind="text: sex"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
