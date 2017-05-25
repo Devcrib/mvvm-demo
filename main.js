@@ -6,7 +6,7 @@ var addressBook = function() {
     this.gender = ko.observable();
 
     this.addContact = function() {
-        _self.contacts.push({ name: _self.name(), number: _self.number(), sex: _self.gender() });
+        _self.contacts.push({ name: _self.name(), number: _self.number(), gender: _self.gender() });
         return false;
     }
 }
